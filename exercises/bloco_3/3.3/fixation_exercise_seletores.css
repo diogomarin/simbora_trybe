@@ -1,0 +1,15 @@
+h2, p {
+  text-align: center;
+}
+
+li {
+  list-style: circle;
+}
+
+li:hover {
+  background-color: burlywood;
+}
+
+li:active {
+  font-family: monospace;
+}

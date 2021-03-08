@@ -1,0 +1,37 @@
+#blue {
+  color: blue;
+  text-decoration: underline;
+}
+
+#red {
+  color: red;
+  text-transform: uppercase;
+}
+
+#orange {
+  color: orange;
+  background-color: teal;
+}
+
+#green {
+  color: green;
+  font-size: xx-large;
+}
+
+#yellow {
+  color: teal;
+  background-color: orange;
+  font-size: xx-large;
+}
+
+div:hover {
+  border: 5px solid black;
+}
+
+div, h3 {
+  text-align: center;
+}
+
+.impar {
+  font-style: italic;
+}

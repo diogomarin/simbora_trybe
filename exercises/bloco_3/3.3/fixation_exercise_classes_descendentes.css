@@ -1,0 +1,66 @@
+#ordered-list {
+  background-color: yellow;
+}
+
+.number-par {
+  color: green;
+}
+
+.primo {
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  color: red;
+}
+
+h1 em {
+  height: 40px;
+  border: 1px solid black;
+}
+
+h3 em {
+  height: 40px;
+  border: 1px solid black;
+}
+
+li {
+  font-size: 20PX;
+}
+
+li em {
+  font-weight: bold;
+}
+
+.three-blue {
+  color: blue;
+}
+
+.back-purple {
+  background-color: pink;
+}
+
+#orange:hover {
+  font-weight: 200px;
+  color: orange;
+}
+
+#green:hover {
+  font-weight: 200px;
+  color: green;
+}
+
+#black:hover {
+  font-weight: 200px;
+  color: black;
+}
+
+#yellow:hover {
+  font-weight: 200px;
+  color: yellow;
+}
+
+#blue:hover {
+  font-weight: 200px;
+  color: blue;
+}
