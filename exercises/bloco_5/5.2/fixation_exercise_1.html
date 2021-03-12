@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício de Fixação 1</title>
+</head>
+<body>
+  <div id="paiDoPai">
+    <div id="pai">
+      <div id="primeiroFilho"></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+      Atenção!
+      <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+
+  <script>
+    //Acessando o elemento 'elementoOndeVoceEsta'
+    console.log(document.getElementById('elementoOndeVoceEsta'));
+
+    //Acessar o elemento pai de 'elementoOndeVoceEsta' e adicionar uma cor a ele
+    let pai = document.getElementById('elementoOndeVoceEsta').parentNode;
+    pai.style.color = 'blue';
+
+    //Acessando o elemento 'primeiroFilhoDoFilho' e adicionado um texto a ele
+    let filhoDoFilho =  document.getElementById('primeiroFilhoDoFilho');
+    filhoDoFilho.innerText = 'Filho do Filho!';
+
+    //Acessando o 'primeiroFilho' a partir de pai
+    console.log(document.querySelector('#pai').lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling);
+
+    //Acessando o 'primeiroFilho' a partir de 'elementoOndeVoceEsta's
+    console.log(document.getElementById('elementoOndeVoceEsta').previousElementSibling);
+
+    //Acessando o texto 'Atenção!' a partir de 'elementoOndeVoceEsta'
+    console.log(document.getElementById('elementoOndeVoceEsta').nextSibling);
+
+    //Acessando o 'terceiroFilho' a partir de 'elementoOndeVoceEsta'
+    console.log(document.getElementById('elementoOndeVoceEsta').nextElementSibling);
+
+    //Acessando o 'terceiroFilho' a partir do pai
+    console.log(document.getElementById('pai').lastElementChild.previousElementSibling);
+
+    //criando um irmão para 'elementoOndeVoceEsta'
+    let paizao = document.querySelector('#pai');
+    let irmao = document.createElement('div');
+    irmao.id = 'irmao';
+
+    paizao.appendChild(irmao);
+
+    //criar um filho para 'elementoOndeVoceEsta'
+    let ondeEstou = document.querySelector('#elementoOndeVoceEsta');
+    let novoFilho = document.createElement('div');
+    novoFilho.id = 'novoFilho';
+
+    ondeEstou.appendChild(novoFilho);
+
+    // //criar um filho para o elemento 'primeiroFilhoDoFilho'
+    let maisUmNovoFilho = document.querySelector('#primeiroFilhoDoFilho');
+    let maisUmFilho = document.createElement('div');
+    maisUmFilho.id = 'maisUmFilho';
+
+    maisUmNovoFilho.appendChild(maisUmFilho);
+
+    //a partir do último filho criado acessar o elemento 'terceiroFilho'
+    console.log(document.getElementById('maisUmFilho').parentNode.parentNode.nextElementSibling);
+
+    //remova todos os elementos da página, menos pai, elementoOndeVoceEsta e primeiroFilhoDoFilho
+    let elementoPai = document.querySelector('#pai');
+    let excluirElementosFilhos = document.querySelectorAll('#pai div');
+
+    for (let i = 0; i < excluirElementosFilhos.length; i += 1) {
+      let elementoFilho = excluirElementosFilhos[i];
+
+      if (elementoFilho.id === 'terceiroFilho') {
+        elementoPai.removeChild(elementoFilho);
+      }
+
+      if (elementoFilho.id === 'quartoEUltimoFilho') {
+        elementoPai.removeChild(elementoFilho);
+      }
+
+      if (elementoFilho.id === 'irmao') {
+        elementoPai.removeChild(elementoFilho);
+      }  
+    }
+
+    let firstChild = document.querySelectorAll('#pai div')[0];
+    elementoPai.removeChild(firstChild);
+
+    let nextElemento = document.querySelector('#elementoOndeVoceEsta');
+    let excluirElementos = document.querySelectorAll('#elementoOndeVoceEsta div');
+
+    for (let i = 0; i < excluirElementos.length; i += 1) {
+      let elementoAoLado = excluirElementos[i]
+
+      if (elementoAoLado.id === 'segundoEUltimoFilhoDoFilho') {
+        nextElemento.removeChild(elementoAoLado);
+      }
+
+      if (elementoAoLado.id === 'novoFilho') {
+        nextElemento.removeChild(elementoAoLado);
+      }
+    }
+
+    let removeMaisUmFilho = document.querySelector('#primeiroFilhoDoFilho');
+    let deleteElemento = document.querySelectorAll('#primeiroFilhoDoFilho div')[0];
+    removeMaisUmFilho.removeChild(deleteElemento);
+
+    let removeText = document.querySelector('#pai')
+    let deleteText = document.querySelector('#pai').childNodes[3];
+    removeText.removeChild(deleteText);
+
+  </script>
+</body>
+</html>
