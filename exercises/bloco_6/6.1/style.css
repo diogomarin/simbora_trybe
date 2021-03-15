@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  padding: 5px;
+}
+
+input {
+  height: 20px;
+  width: 250px;
+}
+
+.residence input{
+  width: 25px;
+}

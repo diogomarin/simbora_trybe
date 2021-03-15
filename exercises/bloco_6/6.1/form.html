@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Register Your Resume</h1>
+  </header>
+  <form action="" method="GET">
+    <fieldset>
+      <label for="input-full-name">Full Name:
+        <input type="text" name="user-name" id="input-full-name" maxlength="40" 
+        placeholder="Enter your full name" required>
+      </label>
+
+      <label for="input-email">Email:
+        <input type="text" name="user-email" id="input-email" maxlength="50"
+        placeholder="Enter your full email" required>
+      </label>
+
+      <label for="input-cpf">CPF:
+        <input type="text" name="user-cpf" id="input-cpf" maxlength="11"
+        placeholder="Just type numbers" required>
+      </label>
+
+      <label for="input-address">Address:
+        <input type="text" name="user-address" id="input-addres" maxlength="200"
+        placeholder="Type here" required>
+      </label>
+      
+      <label for="input-city">City:
+        <input type="text" name="user-city" id="input-city" maxlength="28"
+        placeholder="Type here" required>
+      </label>
+
+      <label for="input-state">State:
+        <select name="user-state" id="input-state" required>
+        </select>
+      </label>
+
+      <label class="residence">Type of Residence:
+        <input type="radio" name="user_residence" id="house-residence" value="house">House
+        <input type="radio" name="user_residence" id="apartment-residence" value="house">Apartment
+      </label>
+    </fieldset>
+  </form>
+</body>
+</html>
