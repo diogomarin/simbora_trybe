@@ -54,8 +54,7 @@ function checkDate() {
   const inputDate = document.querySelector('#input-start-date');
   let date = inputDate.value;
   if(correctDate(date) === false) {
-    // inputDate.value = '';
-    date = '';
+    inputDate.value = '';
     alert('Invalid Date');
     return false
   }
