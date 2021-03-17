@@ -55,7 +55,7 @@ function checkDate() {
   let date = inputDate.value;
   if(correctDate(date) === false) {
     // inputDate.value = '';
-    exemplo = '';
+    date = '';
     alert('Invalid Date');
     return false
   }
