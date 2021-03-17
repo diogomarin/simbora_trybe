@@ -17,3 +17,7 @@ input {
 .residence input{
   width: 25px;
 }
+
+button {
+  padding: 5px;
+}
